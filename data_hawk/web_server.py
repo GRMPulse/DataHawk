@@ -10,10 +10,9 @@ import flask
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
-def home():
+def serve_home():
 	'''Serve the home page'''
 	return render_template('index.html')
 	
-
 if __name__=='__main__':
 	app.run(host='159.203.246.108', port=5000, debug=False)

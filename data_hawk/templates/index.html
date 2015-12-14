@@ -35,87 +35,22 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-sm-8">
+      <div class="col-sm">
         <div class="chart-wrapper">
-          <div class="chart-title">
-            Pageviews by browser (past 24 hours)
-          </div>
+          <!--<div class="chart-title">
+            Real-time Data Stream
+          </div>-->
           <div class="chart-stage">
               <div id="main_chart_pane">
               </div>
           </div>
-          <div class="chart-notes">
-            This is a sample text region to describe this chart.
-          </div>
         </div>
       </div>
-
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Pageviews by browser (past 5 days)
-          </div>
-          <div class="chart-stage">
-            <div id="chart-02"></div>
-          </div>
-          <div class="chart-notes">
-            Notes go down here
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="row">
-
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Impressions by advertiser
-          </div>
-          <div class="chart-stage">
-            <div id="chart-03"></div>
-          </div>
-          <div class="chart-notes">
-            Notes go down here
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Impressions by device
-          </div>
-          <div class="chart-stage">
-            <div id="chart-04"></div>
-          </div>
-          <div class="chart-notes">
-            Notes go down here
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Impressions by country
-          </div>
-          <div class="chart-stage">
-            <div id="chart-05"></div>
-          </div>
-          <div class="chart-notes">
-            Notes go down here
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <hr>
 
-    <p class="small text-muted">Built with help from <a href="https://keen.io">Keen IO</a></p>
+    <!--<p class="small text-muted">Built with help from <a href="https://keen.io">Keen IO</a></p>-->
 
   </div>
 
@@ -166,7 +101,7 @@ d3.json("../static/miserables.json", function(error, graph) {
       .data(graph.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 5)
+      .attr("r", 7)
       .style("fill", function(d) { return color(d.group); })
       .call(force.drag);
 
