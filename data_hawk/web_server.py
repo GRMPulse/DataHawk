@@ -6,6 +6,7 @@
 from flask import Flask
 from flask import render_template
 import flask
+import config
 
 app = Flask(__name__)
 
@@ -15,4 +16,4 @@ def serve_home():
 	return render_template('index.html')
 	
 if __name__=='__main__':
-	app.run(host='159.203.246.108', port=5000, debug=False)
+	app.run(host=config.LOCAL_IP, port=config.LOCAL_PORT, debug=config.RUN_IN_DEBUG)
